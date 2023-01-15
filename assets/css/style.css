@@ -1,0 +1,73 @@
+*, *:after, *:before {
+  /* correct to count width and height */
+  box-sizing: border-box; 
+  font-size: inherit;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  /* -webkit-text-stroke: 0.5px; */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body, html {
+  border: none;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-family: GT America,Helvetica,sans-serif;
+}
+
+li {
+	list-style: none outside none;
+}
+
+a {
+	text-decoration: none;
+}
+
+::selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+	transition: color 5000s ease-in-out 0s, background-color 5000s ease-in-out 0s;
+	-webkit-text-fill-color: var(--black)!important;
+}
+
+input:required {
+	box-shadow: none;
+}
+
+input:invalid {
+	box-shadow: 0 0 0 transparent;
+}
+
+@font-face {
+	font-family: May;
+	src: url(../fonts/May-Regular.woff2) format("woff2"), url(../fonts/May-Regular.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--red: #ff0000;
+	--black: #000000;
+	--white: #ffffff;
+	--grey: #666666;
+}
