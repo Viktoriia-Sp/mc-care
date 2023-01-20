@@ -160,6 +160,7 @@ section .btn,
 .banner-section .grid-content{
   display: flex;
   flex-wrap: wrap;
+  margin-top: 8rem;
 }
 
 .banner-section .grid-content .coll-1{
