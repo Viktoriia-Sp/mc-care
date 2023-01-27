@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 *, *:after, *:before {
   /* correct to count width and height */
   box-sizing: border-box; 
@@ -21,7 +21,7 @@ body, html {
   width: 100%;
   left: 0;
   top: 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Marcellus', serif;
   color: var(--grey);
 }
 
@@ -53,6 +53,11 @@ section .btn,
   height: 40px;
 }
 
+section .btn, 
+.btn a{
+  color: var(--grey);
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:active,
 input:-webkit-autofill:focus,
@@ -74,15 +79,44 @@ input:invalid {
   --grey: #3F3F3F;
 	--black: #1F242A;
 	--white: #ffffff;
-	--green: #1FE5F1;
+	--green: #05DA27;
   --blue: #1C90F5;
   --yellow: #FFD11B;
   --red: #E94D46;
+  --shadow:#C4C4C4;
+  --h1:64px;
+  --h2:48px;
+  --h3:36px;
+  --h4:28px;
+  --h5:20px;
+  --h6:18px;
+  --p:24px;
 }
 
 .container{
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.section h2{
+  font-size: var(--h2);
+  position: relative;
+  padding-left: 8rem;
+}
+
+.section h2::before {
+  content: '';
+  width: 100px;
+  height: 2px;
+  background-color: var(--blue);
+  display: inline-block;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+
+.section h3{
+  font-size: var(--h3);
 }
 
 /* Top */
@@ -109,10 +143,9 @@ input:invalid {
   align-items: center;
 }
 
-.top-section .button-call
-{
+.top-section .button-call {
   border: 2px solid var(--red);
-  border-radius: 5px;
+  border-radius: 50px;
   margin-right: 3rem;
 }
 
@@ -122,7 +155,7 @@ input:invalid {
   font-size: 12px;
   font-weight: 900;
   text-align: center;
-  padding: 0.4rem 2em;
+  padding: 0.7rem 4em;
   display: block;
 }
 
@@ -140,14 +173,14 @@ input:invalid {
 /* Banner */
 
 .banner-section {
-  height: 100vh;
+  min-height: 100%;
   position: relative;
   background-color: var(--light-grey);
 }
 
 .banner-section .img-home{
   position: absolute;
-  top: -80px;
+  top: -70px;
   right: 0;
 }
 
@@ -155,17 +188,13 @@ input:invalid {
   font-size: 110px;
   text-align: center;
   color: var(--blue);
-  line-height: 6rem;
-}
-
-.banner-section h1 span{
-  color: var(--red);
+  line-height: 8rem;
 }
 
 .banner-section .grid-content{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 8rem;
+  margin-top: 10rem;
   justify-content: center;
 }
 
@@ -173,7 +202,7 @@ input:invalid {
   font-size: 24px;
   text-align: center;
   max-width: 58%;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .banner-section .grid-content .med-booking{
@@ -213,26 +242,6 @@ input:invalid {
   top: 9px;
 }
 
-.banner-section .advantage {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 8rem;
-}
-
-.banner-section .advantage .coll-1,
-.banner-section .advantage .coll-2,
-.banner-section .advantage .coll-3{
-  display: flex;
-  flex: 0 0 20%;
-}
-
-.banner-section .advantage p{
-  font-size: 20px;
-  font-weight: 900;
-  text-transform: capitalize;
-  margin-left: 1rem;
-}
-
 /* Top menu */
 
 .banner-section .main-menu{
@@ -258,3 +267,53 @@ input:invalid {
   font-size: 18px;
   font-weight: 900;
 }
+
+/* Section block-2 */
+
+/* .block-2-section {
+  height: 100vh;
+} */
+
+.block-2-section .grid-content{
+  display: flex;
+  align-items: center;
+  margin: 6rem 0;
+}
+
+.block-2-section .coll-1{
+  flex: 0 0 50%;
+}
+
+.block-2-section .coll-2{
+  flex: 0 0 50%;
+}
+
+.block-2-section .top-content p{
+  font-size: 16px;
+  padding-top: 2rem;
+}
+
+
+/* Section block-3 */
+
+.block-3-section{
+  padding: 6rem 0;
+  background-color: var(--light-grey);
+}
+
+.block-3-section h3{
+  padding-bottom: 3rem;
+}
+
+/* Section block-4 */
+
+.block-4-section .grid-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.block-4-section p span {
+  color: var(--blue);
+}
+
