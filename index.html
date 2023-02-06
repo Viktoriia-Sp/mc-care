@@ -62,31 +62,48 @@
                     <div class="top-content">
                         <h2>Free consultation</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                    </div>
+                    </div>  
                 </div>
                 <div class="coll-2">
                    <img src="images/img-block-2.png" alt="block-2">
                 </div>
             </div>
-        </div> <!-- container -->
+        <img class="icon-b2" src="images/icon-b2.svg" alt="block-2">    
+        </div> <!-- container --> 
     </section>
     <section  class="block-3-section section" id="block-3">
         <div class="container"> 
             <h3>Request a Callback</h3>
-            <div class="grid-content">
-                <div class="form-concultation">
-                    <input type="text" maxlength="256" name="name" data-name="Name" placeholder="Full name*" id="name" required="">
-                    <input type="text" maxlength="256" name="l-name" data-name="L-name" placeholder="Last Name*" id="l-name" required="">
-                    <input type="number" maxlength="256" name="phone" data-name="Phone" placeholder="Phone number*" id="phone" required="">
-                    <select id="field-2" name="field-2" data-name="Field 2" required="" class="select-field w-select">
-                        <option value="">I am interested in*</option>
-                        <option value="First">Dentistry</option>
-                        <option value="Second">Gastroenterology</option>
-                        <option value="Third">Endocrinology</option>
-                        <option value="Fourth">Ophthalmology</option>
+            <div class="grid-content form-consultation">
+                    <div class="form-input-container">
+                        <p>Your Name*</p>
+                        <input type="text" maxlength="256" name="name" data-name="Name" placeholder="Full name*" id="name" required="">
+                    </div>
+                    <div class="form-input-container">
+                        <p>Your Last Name*</p>
+                        <input type="text" maxlength="256" name="l-name" data-name="L-name" placeholder="Last Name*" id="l-name" required="">
+                    </div>
+                    <div class="form-input-container">
+                        <p>Your Phone*</p>
+                        <input type="number" maxlength="256" name="phone" data-name="Phone" placeholder="Phone number*" id="phone" required="">
+                    </div>
+                    <div class="form-input-container">
+                        <p>Choose a specialty*</p>
+                    <select id="field-s" name="field-s" data-name="Field-s" required="" class="select-field">
+                            <option value="title">I am interested in*</option>
+                            <option value="First">Therapy</option>
+                            <option value="Second">Diagnostics</option>
+                            <option value="Third">Surgery</option>
+                            <option value="Fourth">Ophthalmology</option>
+                            <option value="Fourth">Urology</option>
+                            <option value="Fourth">Cardiology</option>
+                            <option value="Fourth">Gynecology</option>
+                            <option value="Fourth">Gastroenterology</option>
+                            <option value="Fourth">Pediatrics</option>
+                            <option value="Fourth">Cosmetology</option>
                     </select>
-                    <div class="button-form btn"><input type="submit" value="Get a Free Consultation" data-wait="Please wait..." class="button-concultation"></div>
-                </div>
+                    </div>
+                    <div class="button-form"><input type="submit" value="Get a Free Consultation" data-wait="Please wait..." class="button-concultation btn"></div>
             </div>  
         </div><!-- container -->
         
@@ -94,13 +111,183 @@
     <section  class="block-4-section section" id="block-4">
         <div class="container">
             <div class="grid-content">
-                <h2>Specialties</h2>
-                <p>The services of our clinic have helped more than <span>10000 patients</span></p>
+                <div class="coll-0">
+                    <h2>Specialties</h2>
+                        <p>The services of our clinic have helped more than <span>10000 patients</span></p>
+                        <div class="btn-all"><a href="#" class="href">All Specialties</a> 
+                        <span class="ic-arr"><img src="images/btn-all.svg" alt="block-4"></span>  
+                    </div>
+                </div>
                 <div class="coll-service">
-                 
+                    <div class="coll-1"><div class="wrap"><img src="images/icon-s1.svg" alt="block-4"><p>Therapy</p></div></div>
+                    <div class="coll-2"><div class="wrap"><img src="images/icon-s2.svg" alt="block-4"><p>Cardiology</p></div></div>
+                    <div class="coll-3"><div class="wrap"><img src="images/icon-s3.svg" alt="block-4"><p>Diagnostics</p></div></div>
+                    <div class="coll-4"><div class="wrap"><img src="images/icon-s4.svg" alt="block-4"><p>Neurology</p></div></div>
                 </div>
             </div>
         </div><!-- container -->
+    </section>
+    <section  class="block-5-section section" id="block-5">
+        <div class="container">
+                <h2>Our Doctors</h2>
+                <div class="sort-d">
+                        <div class="form-input-container">
+                            <p>Choose a Doctor</p>
+                                <select id="sort-d" name="sort-d" data-name="sort-d" required="" class="select-field">
+                                        <option value="title">Doctor’s specialization</option>
+                                        <option value="Therapy">Therapy</option>
+                                        <option value="Diagnostics">Diagnostics</option>
+                                        <option value="Surgery">Surgery</option>
+                                        <option value="Ophthalmology">Ophthalmology</option>
+                                        <option value="Urology">Urology</option>
+                                        <option value="Cardiology">Cardiology</option>
+                                        <option value="Gynecology">Gynecology</option>
+                                        <option value="Gastroenterology">Gastroenterology</option>
+                                        <option value="Pediatrics">Pediatrics</option>
+                                        <option value="Cosmetology">Cosmetology</option>
+                                </select>
+                        </div>
+                        <div class="form-input-container">
+                            <p>Show by</p>
+                                <select id="sort-d2" name="sort-d2" data-name="sort-d2" required="" class="select-field">
+                                        <option value="title">8 results</option>
+                                        <option value="First">12 results</option>
+                                        <option value="Second">20 results</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="grid-content">
+                        <div class="coll">
+                            <div class="img-d"><img src="images/img-1.jpg" alt="doctors"></div>
+                                <div class="content">
+                                    <div class="title">Surgeon Specialist</div>
+                                    <div class="desc">10 years of practice</div>
+                                </div>
+                        </div><!-- coll -->
+                        <div class="coll">
+                            <div class="img-d"><img src="images/img-2.jpg" alt="doctors"></div>
+                                <div class="content">
+                                    <div class="title">Surgery Specialist</div>
+                                    <div class="desc">36 years of practice</div>
+                                </div>
+                        </div><!-- coll -->
+                        <div class="coll">
+                            <div class="img-d"><img src="images/img-3.jpg" alt="doctors"></div>
+                                <div class="content">
+                                    <div class="title">Cardiologist  Specialist</div>
+                                    <div class="desc">10 years of practice</div>
+                                </div>
+                        </div><!-- coll -->
+                        <div class="coll">
+                            <div class="img-d"><img src="images/img-4.jpg" alt="doctors"></div>
+                                <div class="content">
+                                    <div class="title">Family Physician Specialist</div>
+                                    <div class="desc">10 years of practice</div>
+                                </div>
+                        </div><!-- coll -->
+                        <div class="coll">
+                            <div class="img-d"><img src="images/img-5.jpg" alt="doctors"></div>
+                                <div class="content">
+                                    <div class="title">Neurologist Specialist</div>
+                                    <div class="desc">10 years of practice</div>
+                                </div>
+                        </div><!-- coll -->
+                        <div class="coll">
+                            <div class="img-d"><img src="images/img-6.jpg" alt="doctors"></div>
+                                <div class="content">
+                                    <div class="title">Pediatrician Specialist </div>
+                                    <div class="desc">10 years of practice</div>
+                                </div>
+                        </div><!-- coll -->
+                        <div class="coll">
+                            <div class="img-d"><img src="images/img-7.jpg" alt="doctors"></div>
+                                <div class="content">
+                                    <div class="title">Gynecologist Specialist</div>
+                                    <div class="desc">10 years of practice</div>
+                                </div>
+                        </div><!-- coll -->
+                        <div class="coll">
+                            <div class="img-d"><img src="images/img-8.jpg" alt="doctors"></div>
+                                <div class="content">
+                                    <div class="title">Optometrist Specialist</div>
+                                    <div class="desc">10 years of practice</div>
+                                </div>
+                        </div><!-- coll -->
+                        <div class="navigator">
+                            <span>1</span>
+                            <span>2</span>
+                            <span class="activ">3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span id="next">Next</span>
+                        </div>
+                </div><!-- grid-content -->
+                
+            </div>
+        </div><!-- container -->
+    </section>
+    <section  class="block-6-section section" id="block-6">
+        <div class="container">
+                <h2>Benefits of our clinic</h2>
+                <div class="grid-content">
+                    <div class="coll">
+                        <img src="images/icon-1b.svg" alt="benefits">
+                        <div class="content">
+                            <div class="title">Modern equipment</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                    </div><!-- coll -->
+                    <div class="coll">
+                        <img src="images/icon-2b.svg" alt="benefits">
+                        <div class="content">
+                            <div class="title">Modern equipment</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                    </div><!-- coll -->
+                    <div class="coll">
+                        <img src="images/icon-3b.svg" alt="benefits">
+                        <div class="content">
+                            <div class="title">Modern equipment</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                    </div><!-- coll -->
+                    <div class="coll">
+                        <img src="images/icon-4b.svg" alt="benefits">
+                        <div class="content">
+                            <div class="title">Modern equipment</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                    </div><!-- coll -->
+                    <div class="coll">
+                        <img src="images/icon-5b.svg" alt="benefits">
+                        <div class="content">
+                            <div class="title">Modern equipment</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                    </div><!-- coll -->
+                    <div class="coll">
+                        <img src="images/icon-6b.svg" alt="benefits">
+                        <div class="content">
+                            <div class="title">Modern equipment</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                    </div><!-- coll -->
+                </div><!-- grid-content -->
+        </div>
+        <div class="coll-team">
+            <div class="container">
+                <div class="grid-content">
+                    <h2>Our team is a close-knit team</h2>
+                    <div class="img-plus"> <img src="images/icon-plus.svg" alt="team"></div>
+                    <div class="coll">
+                            <img src="images/icone-t.svg" alt="benefits">
+                            <div class="content">
+                                <div class="title">Medical assistance 24/7</div>
+                                <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                            </div>
+                    </div><!-- coll -->
+            </div>
+        </div>
     </section>
 </body>
 <script type="text/javascript" src="assets/js/script.js"></script>
