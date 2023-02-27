@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     
     <title>Medical Center «Care»</title>
 </head>
@@ -20,6 +21,22 @@
                 </div>
                 <div class="coll-contact">
                     <div class="phone">+38 (500) 000-00-00</div>
+                    <div class="modal hidden">
+                        <div class="grid-content">
+                            <button class="btn-close"><i class='bx bx-x'></i></button>
+                            <img class="img-modal" src="images/doctor-call.jpeg" alt="user" /> 
+                                <div class="content">
+                                    <h3>Thank you!</h3>
+                                    <p>
+                                        Your submission has been received. We will be contacting you soon.
+                                    </p>
+                                </div>
+                          <input type="text" id="call-name" placeholder="Your name" />
+                          <input type="number" id="call-back" placeholder="+38" />
+                          <button class="btn call-submit">send</button>
+                       </div> <!-- grid-content -->
+                    </div>
+                    <div class="overlay hidden"></div>
                     <div class="button-call btn"><a href="#">call back</a></div>
                         <div class="s-network">
                             <a href="#" class="facebook"><img src="images/Facebook.svg" alt="img-Facebook"></a>
@@ -34,12 +51,34 @@
             <div class="main-menu">
                 <nav id="nav">
                     <ul class="menu-top">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#doctors">Doctors</a></li>
-                        <li><a href="#polyclinic">Polyclinic</a></li>
-                        <li><a href="#prices">Prices</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contacts</a></li>
+                        <div class="dropdown-container"><li><a href="#home">Home</a></li></div>
+                        <div class="dropdown-container">
+                            <li class="dropdown-toggle click-dropdown">
+                              <a href="#">Doctors
+                                <i class="bx bx-chevron-down arr-toggle"></i>
+                              </a></li>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Item 1(dropdown-menu dropdown-active)</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                                <li><a href="#">Item 4</a></li>
+                              </ul>  
+                        </div>
+                        <div class="dropdown-container">
+                            <li class="dropdown-toggle click-dropdown">
+                              <a href="#">Polyclinic
+                                <i class="bx bx-chevron-down arr-toggle"></i>
+                              </a></li>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                                <li><a href="#">Item 4</a></li>
+                              </ul>  
+                        </div>
+                        <div class="dropdown-container"><li><a href="#prices">Prices</a></li></div>
+                        <div class="dropdown-container"><li><a href="#blog">Blog</a></li></div>
+                        <div class="dropdown-container"><li><a href="#contact">Contacts</a></li></div>
                     </ul>
                 </nav>
             </div> 
@@ -48,8 +87,8 @@
                 <h1>Medical Center <span>«Care»</span></h1> 
                 <p>In the Poly Clinic medical center, adult and pediatric patients can get advice from almost any specialist. perform additional diagnostics.</p>
                 <div class="med-booking">
-                    <div class="btn btn-request"><a href="#">Request<span></span></a></div>
-                    <div class="btn btn-schedule"><a href="#">Schedule<span></span></a></div>
+                    <div class="btn btn-y btn-request"><a href="#">Request<span></span></a></div>
+                    <div class="btn btn-o btn-schedule"><a href="#">Schedule<span></span></a></div>
                 </div>         
         </div><!-- grid-content -->
     </div>
@@ -103,7 +142,7 @@
                             <option value="Fourth">Cosmetology</option>
                     </select>
                     </div>
-                    <div class="button-form"><input type="submit" value="Get a Free Consultation" data-wait="Please wait..." class="button-concultation btn"></div>
+                    <div class="button-form"><input type="submit" value="Get a Free Consultation" data-wait="Please wait..." class="button-concultation btn btn-y"></div>
             </div>  
         </div><!-- container -->
         
@@ -133,6 +172,7 @@
                 <div class="sort-d">
                         <div class="form-input-container">
                             <p>Choose a Doctor</p>
+                            <div class="custom-select">
                                 <select id="sort-d" name="sort-d" data-name="sort-d" required="" class="select-field">
                                         <option value="title">Doctor’s specialization</option>
                                         <option value="Therapy">Therapy</option>
@@ -145,15 +185,20 @@
                                         <option value="Gastroenterology">Gastroenterology</option>
                                         <option value="Pediatrics">Pediatrics</option>
                                         <option value="Cosmetology">Cosmetology</option>
+                                        <option value="title">All Doctor’s</option>
                                 </select>
+                            </div><!-- custom-select -->
                         </div>
                         <div class="form-input-container">
                             <p>Show by</p>
+                            <div class="custom-select">
                                 <select id="sort-d2" name="sort-d2" data-name="sort-d2" required="" class="select-field">
+                                        <option value="title">All</option>
                                         <option value="title">8 results</option>
                                         <option value="First">12 results</option>
                                         <option value="Second">20 results</option>
                                 </select>
+                            </div><!-- custom-select -->
                         </div>
                     </div>
                     <div class="grid-content">

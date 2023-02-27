@@ -35,7 +35,6 @@ button::-moz-focus-inner {
   cursor: pointer;
 }
 
-section .btn, 
 .btn {
   position: relative;
   -webkit-transition: all 200ms linear;
@@ -43,6 +42,21 @@ section .btn,
   cursor: pointer;
   border-radius: 50px;
   height: 40px;
+}
+
+.btn-y:hover {
+  background-color: var(--light-grey) !important;
+  border: 2px solid var(--yellow) !important;
+}
+
+.btn-y {
+  background-color: var(--yellow);
+  border: 2px solid var(--yellow) !important;
+}
+
+.btn-o:hover {
+  background-color: var(--yellow) !important;
+  border: 2px solid var(--yellow) !important;
 }
 
 section .btn, 
@@ -85,7 +99,70 @@ select {
 	appearance: none;
 }
 
+/* Select */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; 
+}
+
+.select-selected {
+  padding: 0.6rem 3rem 0.6rem 2rem;
+  border-radius: 30px;
+  border: 1px solid var(--grey-b);
+  color: var(--grey-b);
+}
+
+.select-selected:after {
+  position: absolute;
+  top: 10px;
+  right: 1.6rem;
+  width: 12px;
+  height: 12px;
+  content: url(../images/arr-select.png);
+  background-repeat: no-repeat;
+  transform-origin: 50% 50%;
+}
+
+.select-selected.select-arrow-active:after {
+  background-repeat: no-repeat;
+  top: 24px;
+  transform: rotateX(180deg);
+  transition: 0.2s ease;
+  transform-origin: 50% 50%;
+}
+
+.select-items div{
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--midd-grey);
+  box-shadow: 0 0 2rem var(--shadow);
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+  color: var(--grey);
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* Select End*/
 :root {
+  --index: calc(1vw +1vh);
 	--light-grey: #F3F3F3;
   --midd-grey:#EDF0F2;
   --grey: #3F3F3F;
@@ -148,6 +225,7 @@ select {
   justify-content: space-between;
   align-items: center;
   padding-top: 0.4rem;
+  position: relative;
 }
 
 .top-section .coll-contact {
@@ -155,21 +233,120 @@ select {
   align-items: center;
 }
 
+/* Modal call */
+
 .top-section .button-call {
-  border: 2px solid var(--red);
-  border-radius: 50px;
+  border-bottom: 2px solid var(--red);
   margin-right: 3rem;
+  margin-top: -0.6rem;
+  border-radius: 0;
 }
 
 .top-section .button-call a {
   color: var(--red);
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 900;
   text-align: center;
-  padding: 0.7rem 4em;
+  padding: 0.9rem 0.6em;
+  letter-spacing: .1rem;
   display: block;
 }
+
+.top-section .img-modal{
+  max-width: 600px;
+}
+
+.top-section .modal {
+  width: 643px;
+  padding: 1.3rem;
+  min-height: 250px;
+  position: absolute;
+  top: 140%;
+  background-color: var(--light-grey);
+  border-radius: 0.4rem;
+  left: 20%;
+  right: 0;
+  z-index: 2;
+}
+
+.top-section .modal i:before {
+  font-size: 2rem;
+  color: var(--grey);
+}
+
+.top-section .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.top-section .modal .grid-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.top-section .modal input {
+  padding: 0.6rem 2rem;
+  border-radius: 30px;
+  border: 1px solid #e0e0e0;
+  font-family: 'Marcellus', serif;
+}
+
+.top-section .modal p {
+  font-size: 0.9rem;
+  color: var(--grey);
+  margin: 0.4rem 0 2em;
+}
+
+.top-section button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.top-section .btn {
+  display: inline-block;
+  text-align: center;
+}
+
+.top-section .call-submit {
+  background-color: var(--yellow);
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 2rem;
+}
+
+.top-section .btn-open {
+  position: absolute;
+  bottom: 150px;
+}
+
+.top-section .btn-close {
+  transform: translate(10px, -20px);
+  padding: 0.3rem 0.4rem;
+  background: var(--light-grey);
+  border-radius: 50px;
+  position: absolute;
+  top: 0px;
+  right: -70px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Modal call end*/
 
 .top-section .phone {
   padding-right: 3rem;
@@ -194,7 +371,11 @@ select {
 .banner-section .img-home{
   position: absolute;
   top: -70px;
-  right: 0;
+  right: 0vw;
+}
+
+.banner-section .img-home img{
+  max-width: 100%;  
 }
 
 .banner-section h1 {
@@ -202,6 +383,7 @@ select {
   text-align: center;
   color: var(--blue);
   line-height: 8rem;
+  position: relative;
 }
 
 .banner-section .grid-content{
@@ -235,9 +417,7 @@ select {
 }
 
 .banner-section .grid-content .med-booking .btn-request{
-  background-color: var(--yellow);
   margin-right: 2rem;
-  border: 2px solid var(--yellow);
 }
 
 .banner-section .grid-content .med-booking .btn-schedule{
@@ -262,6 +442,8 @@ select {
   display: inline-block;
   width: 100%;
   height: 100px;
+  position: relative;
+  z-index: 1;
 }
 
 .banner-section .main-menu .menu-top{
@@ -270,8 +452,19 @@ select {
 }
 
 .banner-section .main-menu .menu-top li {
-  padding-right: 5rem;
   margin-top: 3rem;
+  margin-right: 2rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.banner-section .main-menu .menu-top li:hover {
+  background-color: var(--yellow);
+}
+
+.banner-section .main-menu .menu-top .dropdown-toggle{
+  margin-bottom: 1rem;
 }
 
 .banner-section .main-menu .menu-top a{
@@ -280,6 +473,50 @@ select {
   font-size: 18px;
   font-weight: 900;
 }
+
+.banner-section .main-menu .dropdown-menu{
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+  background-color: var(--midd-grey);
+  box-shadow: 0 0 2rem var(--shadow);
+  border-radius: 0.2rem;
+  margin-left: -1rem;
+  position: absolute;
+   z-index: 2;
+   width: 190px;
+}
+
+.banner-section .main-menu .dropdown-menu li{
+  padding: 0.6rem 1rem;
+  margin-top: 0.2rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+}
+
+.banner-section .main-menu .dropdown-menu li:hover{
+ background-color: var(--yellow);
+}
+
+.banner-section .main-menu .dropdown-menu li a{
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.banner-section .main-menu .dropdown-menu.dropdown-active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+.banner-section .main-menu .dropdown-toggle a.arrow > i{
+  transform: rotate(180deg);
+  transition: 0.2s ease;
+}
+
 
 /* Section block-2 */
 
